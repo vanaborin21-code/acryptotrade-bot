@@ -1,0 +1,7 @@
+ccxt==4.2.15
+python-binance==1.0.19
+pyyaml==6.0.1
+redis==5.0.1
+psycopg2-binary==2.9.9
+websocket-client==1.7.0
+python-dotenv==1.0.1

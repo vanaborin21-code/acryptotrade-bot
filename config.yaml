@@ -1,0 +1,25 @@
+exchange:
+  name: binance
+  api_key: ${BINANCE_API_KEY}
+  api_secret: ${BINANCE_API_SECRET}
+  testnet: false
+
+strategy:
+  pair: XAU-USDT
+  leverage: 20
+  margin_mode: isolated
+  max_position_usdt: 80000
+  spread_threshold: 0.00008
+  stop_loss_pct: 0.4
+
+risk:
+  daily_max_loss_usdt: 5000
+  max_open_positions: 4
+
+panel:
+  url: http://66.154.102.24/
+  user: admin
+
+server:
+  host: web-prod-01
+  deploy_user: root
