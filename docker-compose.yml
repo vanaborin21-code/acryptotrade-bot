@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  bot:
+    build: .
+    env_file: .env
+    command: python3 bot.py --pair XAU-USDT --margin 20x
+    restart: always
+  feed:
+    build: .
+    env_file: .env
+    command: python3 feed.py
+    restart: always
+  redis:
+    image: redis:7
+    command: redis-server --requirepass R3dis_2026
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: trader
+      POSTGRES_PASSWORD: Tr4d3rDB_2026
+      POSTGRES_DB: trading
